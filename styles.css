@@ -180,9 +180,9 @@ h3 {
 }
 
 h1 {
-  max-width: 850px;
-  font-size: clamp(3rem, 7vw, 6.4rem);
-  letter-spacing: -0.07em;
+  max-width: 760px;
+  font-size: clamp(2.55rem, 5.8vw, 5.1rem);
+  letter-spacing: -0.06em;
 }
 
 h2 {
@@ -262,11 +262,13 @@ h3 {
   margin-bottom: 0;
 }
 
-.education-section {
+.education-section,
+.experience-section {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.education-card {
+.education-card,
+.experience-card {
   display: grid;
   grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1fr);
   gap: clamp(1.5rem, 4vw, 3rem);
@@ -279,7 +281,14 @@ h3 {
   box-shadow: 0 16px 46px rgba(0, 0, 0, 0.18);
 }
 
-.education-date {
+.experience-card {
+  background:
+    linear-gradient(145deg, rgba(255, 209, 102, 0.13), rgba(114, 228, 255, 0.06)),
+    var(--panel);
+}
+
+.education-date,
+.experience-date {
   margin: 0 0 0.75rem;
   color: var(--accent);
   font-size: 0.85rem;
@@ -288,10 +297,42 @@ h3 {
   text-transform: uppercase;
 }
 
-.education-school {
+.education-school,
+.experience-place {
   margin: 0.75rem 0 0;
   color: var(--muted);
   font-weight: 700;
+}
+
+.experience-details p {
+  margin-top: 0;
+}
+
+.experience-details ul {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0;
+  margin: 1rem 0 0;
+  list-style: none;
+}
+
+.experience-details li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.experience-details li::before {
+  position: absolute;
+  top: 0.65rem;
+  left: 0;
+  width: 0.45rem;
+  height: 0.45rem;
+  content: "";
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(255, 209, 102, 0.6);
 }
 
 .coursework {
@@ -795,6 +836,7 @@ h3 {
   .hero,
   .split-section,
   .education-card,
+  .experience-card,
   .project-grid {
     grid-template-columns: 1fr;
   }

@@ -4,7 +4,7 @@ A personal portfolio website for Jason Dahan, built as a lightweight static site
 
 ## Features
 
-- Responsive landing page with About, Education, Projects, Skills, and Contact sections
+- Responsive landing page with About, Education, Experience, Projects, Skills, and Contact sections
 - LinkedIn and GitHub calls to action
 - Featured project cards for C compiler, C assembler, C++, Java, Python, and web work
 - Cute robot avatar with an idle hiring pitch and project-specific hover jokes
