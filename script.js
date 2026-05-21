@@ -1,8 +1,12 @@
 const progressBar = document.querySelector(".scroll-progress");
 const avatarLine = document.querySelector("#avatar-line");
+const avatarCompanion = document.querySelector(".avatar-companion");
 const projectCards = Array.from(document.querySelectorAll(".project-card"));
 
-const defaultLine = "Welcome! Scroll through Jason's projects and I will provide highly professional jokes.";
+const defaultLine = "Welcome! Hover over a project and I will deliver code jokes with suspicious confidence.";
+let activeCard = null;
+let hoveredCard = null;
+let talkTimeout;
 
 function updateScrollProgress() {
   const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -11,11 +15,54 @@ function updateScrollProgress() {
 }
 
 function setActiveCard(card) {
+  activeCard = card;
+
+  if (hoveredCard) {
+    return;
+  }
+
   projectCards.forEach((projectCard) => {
     projectCard.classList.toggle("is-active", projectCard === card);
   });
 
-  avatarLine.textContent = card?.dataset.avatarLine || defaultLine;
+  updateAvatarLine(card?.dataset.avatarLine || defaultLine);
+}
+
+function updateAvatarLine(line) {
+  avatarLine.textContent = line;
+  avatarCompanion.classList.add("is-talking");
+
+  window.clearTimeout(talkTimeout);
+  talkTimeout = window.setTimeout(() => {
+    avatarCompanion.classList.remove("is-talking");
+  }, 650);
+}
+
+function setHoveredCard(card) {
+  hoveredCard = card;
+
+  projectCards.forEach((projectCard) => {
+    const isCurrentCard = projectCard === card;
+    projectCard.classList.toggle("is-active", isCurrentCard);
+    projectCard.classList.toggle("is-hovered", isCurrentCard);
+  });
+
+  updateAvatarLine(card.dataset.hoverLine || card.dataset.avatarLine || defaultLine);
+}
+
+function clearHoveredCard(card) {
+  if (hoveredCard !== card) {
+    return;
+  }
+
+  hoveredCard = null;
+
+  projectCards.forEach((projectCard) => {
+    projectCard.classList.remove("is-hovered");
+    projectCard.classList.toggle("is-active", projectCard === activeCard);
+  });
+
+  updateAvatarLine(activeCard?.dataset.avatarLine || defaultLine);
 }
 
 const projectObserver = new IntersectionObserver(
@@ -34,7 +81,13 @@ const projectObserver = new IntersectionObserver(
   },
 );
 
-projectCards.forEach((card) => projectObserver.observe(card));
+projectCards.forEach((card) => {
+  projectObserver.observe(card);
+  card.addEventListener("mouseenter", () => setHoveredCard(card));
+  card.addEventListener("focus", () => setHoveredCard(card));
+  card.addEventListener("mouseleave", () => clearHoveredCard(card));
+  card.addEventListener("blur", () => clearHoveredCard(card));
+});
 window.addEventListener("scroll", updateScrollProgress, { passive: true });
 window.addEventListener("resize", updateScrollProgress);
 updateScrollProgress();

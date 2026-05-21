@@ -88,15 +88,17 @@
           <h2>Different tools, different strengths.</h2>
           <p>
             Replace these cards with your live repositories, demos, or class projects as your portfolio grows.
-            The avatar reacts to each project language while the visitor scrolls.
+            The avatar reacts to each project language while the visitor scrolls or hovers over a card.
           </p>
         </div>
 
         <div class="project-grid">
           <article
             class="project-card"
+            tabindex="0"
             data-language="C"
-            data-avatar-line="C spotted! I promise to manage memory responsibly... after one tiny malloc joke."
+            data-avatar-line="C project in view. Low-level control, high-level confidence, and only a modest chance of pointer drama."
+            data-hover-line="You hovered C. I allocated one compliment for Jason, and yes, I remembered to free it."
           >
             <div class="card-topline">
               <span class="language-pill c">C</span>
@@ -116,8 +118,10 @@
 
           <article
             class="project-card"
+            tabindex="0"
             data-language="C++"
-            data-avatar-line="C++ time: classes, templates, and just enough operator overloading to keep life spicy."
+            data-avatar-line="C++ ahead. It has classes, speed, and a template error message long enough to need its own table of contents."
+            data-hover-line="C++ hover detected. This project has object-oriented design with just enough chaos to keep the compiler entertained."
           >
             <div class="card-topline">
               <span class="language-pill cpp">C++</span>
@@ -137,8 +141,10 @@
 
           <article
             class="project-card"
+            tabindex="0"
             data-language="Java"
-            data-avatar-line="Java entering the chat: write once, debug thoughtfully everywhere."
+            data-avatar-line="Java project loading. Strong types, clean classes, and a JVM warming up like it is stretching before a race."
+            data-hover-line="You found the Java card. It is write once, run anywhere, explain stack traces everywhere."
           >
             <div class="card-topline">
               <span class="language-pill java">Java</span>
@@ -158,8 +164,10 @@
 
           <article
             class="project-card"
+            tabindex="0"
             data-language="Python"
-            data-avatar-line="Python project ahead. The code is readable, the scripts are helpful, and the snake is friendly."
+            data-avatar-line="Python in view. The code reads nicely, the scripts do chores, and the indentation is holding everyone accountable."
+            data-hover-line="Python hover mode. Jason made the computer do the boring part, which is exactly why computers exist."
           >
             <div class="card-topline">
               <span class="language-pill python">Python</span>
@@ -179,8 +187,10 @@
 
           <article
             class="project-card"
+            tabindex="0"
             data-language="Web"
-            data-avatar-line="Web stack detected. I brought responsive layouts and exactly zero table-based designs."
+            data-avatar-line="Web project spotted. Responsive layout, smooth interactions, and no tables were harmed for page structure."
+            data-hover-line="You hovered the website itself. Very meta. The portfolio is now reviewing its own portfolio."
           >
             <div class="card-topline">
               <span class="language-pill web">Web</span>
@@ -241,17 +251,24 @@
 
     <aside class="avatar-companion" aria-live="polite" aria-label="Portfolio avatar companion">
       <div class="speech-bubble" id="avatar-line">
-        Welcome! Scroll through Jason's projects and I will provide highly professional jokes.
+        Welcome! Hover over a project and I will deliver code jokes with suspicious confidence.
       </div>
       <div class="avatar" aria-hidden="true">
+        <span class="avatar-antenna"></span>
+        <span class="avatar-headphones"></span>
         <div class="avatar-face">
           <span class="avatar-eye left"></span>
           <span class="avatar-eye right"></span>
+          <span class="avatar-cheek left"></span>
+          <span class="avatar-cheek right"></span>
           <span class="avatar-smile"></span>
         </div>
+        <span class="avatar-arm left"></span>
+        <span class="avatar-arm right"></span>
         <div class="avatar-body">
           <span class="avatar-badge">&lt;/&gt;</span>
         </div>
+        <span class="avatar-shadow"></span>
       </div>
     </aside>
 
