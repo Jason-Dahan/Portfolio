@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Jason Dahan's portfolio: software projects, technical interests, and ways to connect."
+    />
+    <title>Jason Dahan | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="Jason Dahan home">JD</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="https://www.linkedin.com/in/jason-dahan/" target="_blank" rel="noreferrer">
+        LinkedIn
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Software developer portfolio</p>
+          <h1>Hi, I'm Jason Dahan. I build thoughtful software across systems, backend, and data projects.</h1>
+          <p class="hero-description">
+            This portfolio highlights projects in C, C++, Java, Python, and web technologies, with a small
+            floating teammate who comments on the stack while you explore.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="https://github.com/Jason-Dahan" target="_blank" rel="noreferrer">
+              GitHub profile
+            </a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Portfolio snapshot">
+          <div>
+            <span class="metric">5+</span>
+            <span class="metric-label">project areas</span>
+          </div>
+          <div>
+            <span class="metric">C / C++</span>
+            <span class="metric-label">systems foundations</span>
+          </div>
+          <div>
+            <span class="metric">Python</span>
+            <span class="metric-label">automation and data</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="section-shell split-section">
+        <div>
+          <p class="eyebrow">About me</p>
+          <h2>Curious, practical, and always learning.</h2>
+        </div>
+        <div class="section-copy">
+          <p>
+            I enjoy turning ideas into reliable software, whether that means writing low-level logic,
+            designing object-oriented applications, automating a workflow, or presenting a clean user
+            experience. My work spans multiple languages because each project deserves the right tool.
+          </p>
+          <p>
+            Outside of code, I care about clear communication, shipping useful work, and documenting how
+            things are built so future collaborators can move faster.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Featured projects</p>
+          <h2>Different tools, different strengths.</h2>
+          <p>
+            Replace these cards with your live repositories, demos, or class projects as your portfolio grows.
+            The avatar reacts to each project language while the visitor scrolls.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article
+            class="project-card"
+            data-language="C"
+            data-avatar-line="C spotted! I promise to manage memory responsibly... after one tiny malloc joke."
+          >
+            <div class="card-topline">
+              <span class="language-pill c">C</span>
+              <span>Systems</span>
+            </div>
+            <h3>Mini Shell & Process Tools</h3>
+            <p>
+              A systems programming project focused on process control, file descriptors, parsing commands,
+              and understanding how operating systems coordinate work.
+            </p>
+            <ul>
+              <li>Process management</li>
+              <li>Pointer-safe data handling</li>
+              <li>Unix-style command flow</li>
+            </ul>
+          </article>
+
+          <article
+            class="project-card"
+            data-language="C++"
+            data-avatar-line="C++ time: classes, templates, and just enough operator overloading to keep life spicy."
+          >
+            <div class="card-topline">
+              <span class="language-pill cpp">C++</span>
+              <span>Algorithms</span>
+            </div>
+            <h3>Algorithm Visualizer</h3>
+            <p>
+              A project concept for comparing sorting and graph algorithms with reusable data structures,
+              performance notes, and readable object-oriented design.
+            </p>
+            <ul>
+              <li>Data structures</li>
+              <li>Runtime comparison</li>
+              <li>Reusable components</li>
+            </ul>
+          </article>
+
+          <article
+            class="project-card"
+            data-language="Java"
+            data-avatar-line="Java entering the chat: write once, debug thoughtfully everywhere."
+          >
+            <div class="card-topline">
+              <span class="language-pill java">Java</span>
+              <span>Backend</span>
+            </div>
+            <h3>Campus Planner API</h3>
+            <p>
+              A backend application idea that models courses, deadlines, and reminders with clean classes,
+              validation rules, and API-friendly domain objects.
+            </p>
+            <ul>
+              <li>Object-oriented modeling</li>
+              <li>Validation workflows</li>
+              <li>Service-layer design</li>
+            </ul>
+          </article>
+
+          <article
+            class="project-card"
+            data-language="Python"
+            data-avatar-line="Python project ahead. The code is readable, the scripts are helpful, and the snake is friendly."
+          >
+            <div class="card-topline">
+              <span class="language-pill python">Python</span>
+              <span>Automation</span>
+            </div>
+            <h3>Data Storytelling Toolkit</h3>
+            <p>
+              A Python workflow for cleaning datasets, generating summaries, and turning raw information into
+              useful charts or reports for decision-making.
+            </p>
+            <ul>
+              <li>Data cleaning</li>
+              <li>Automation scripts</li>
+              <li>Readable reports</li>
+            </ul>
+          </article>
+
+          <article
+            class="project-card"
+            data-language="Web"
+            data-avatar-line="Web stack detected. I brought responsive layouts and exactly zero table-based designs."
+          >
+            <div class="card-topline">
+              <span class="language-pill web">Web</span>
+              <span>Frontend</span>
+            </div>
+            <h3>Interactive Portfolio</h3>
+            <p>
+              The website you are viewing now: responsive sections, accessible navigation, animated details,
+              and a scroll-aware avatar for a memorable personal touch.
+            </p>
+            <ul>
+              <li>Responsive design</li>
+              <li>Accessible markup</li>
+              <li>Scroll interaction</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section-shell skills-section">
+        <div class="section-heading">
+          <p class="eyebrow">Skills and focus</p>
+          <h2>Technical areas worth highlighting.</h2>
+        </div>
+        <div class="skill-cloud" aria-label="Technical skills">
+          <span>C</span>
+          <span>C++</span>
+          <span>Java</span>
+          <span>Python</span>
+          <span>JavaScript</span>
+          <span>Git</span>
+          <span>Data structures</span>
+          <span>Backend design</span>
+          <span>Automation</span>
+          <span>Responsive UI</span>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell contact-section">
+        <div>
+          <p class="eyebrow">Let's connect</p>
+          <h2>Have a project, opportunity, or idea?</h2>
+          <p>
+            LinkedIn is the best place to reach me. You can also review my code on GitHub and add resume,
+            email, or live demo links here when they are ready.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://www.linkedin.com/in/jason-dahan/" target="_blank" rel="noreferrer">
+            Visit LinkedIn
+          </a>
+          <a class="button secondary" href="https://github.com/Jason-Dahan" target="_blank" rel="noreferrer">
+            View GitHub
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <aside class="avatar-companion" aria-live="polite" aria-label="Portfolio avatar companion">
+      <div class="speech-bubble" id="avatar-line">
+        Welcome! Scroll through Jason's projects and I will provide highly professional jokes.
+      </div>
+      <div class="avatar" aria-hidden="true">
+        <div class="avatar-face">
+          <span class="avatar-eye left"></span>
+          <span class="avatar-eye right"></span>
+          <span class="avatar-smile"></span>
+        </div>
+        <div class="avatar-body">
+          <span class="avatar-badge">&lt;/&gt;</span>
+        </div>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <p>Designed and built for Jason Dahan.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
