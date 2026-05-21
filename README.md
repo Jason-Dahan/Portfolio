@@ -6,8 +6,8 @@ A personal portfolio website for Jason Dahan, built as a lightweight static site
 
 - Responsive landing page with About, Projects, Skills, and Contact sections
 - LinkedIn and GitHub calls to action
-- Featured project cards for C, C++, Java, Python, and web work
-- Friendly scroll-aware avatar that jokes about each project language
+- Featured project cards for C compiler, C assembler, C++, Java, Python, and web work
+- Cute robot avatar with an idle hiring pitch and project-specific hover jokes
 - No build step or framework dependency required
 
 ## Run locally
@@ -24,4 +24,4 @@ Then visit <http://localhost:8000>.
 
 - Update LinkedIn/GitHub links in `index.html`
 - Replace project card titles, descriptions, and bullet points with your real projects
-- Edit each card's `data-avatar-line` value to change the avatar jokes
+- Edit each card's `data-hover-line` value to change the robot's hover jokes

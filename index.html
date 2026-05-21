@@ -39,7 +39,7 @@
           <h1>Hi, I'm Jason Dahan. I build thoughtful software across systems, backend, and data projects.</h1>
           <p class="hero-description">
             This portfolio highlights projects in C, C++, Java, Python, and web technologies, with a small
-            floating teammate who comments on the stack while you explore.
+            floating robot teammate who comments on the stack while you explore.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#projects">View projects</a>
@@ -88,7 +88,7 @@
           <h2>Different tools, different strengths.</h2>
           <p>
             Replace these cards with your live repositories, demos, or class projects as your portfolio grows.
-            The avatar reacts to each project language while the visitor scrolls or hovers over a card.
+            The robot keeps the pitch ready, then reacts with project-specific jokes when a visitor hovers.
           </p>
         </div>
 
@@ -97,22 +97,45 @@
             class="project-card"
             tabindex="0"
             data-language="C"
-            data-avatar-line="C project in view. Low-level control, high-level confidence, and only a modest chance of pointer drama."
-            data-hover-line="You hovered C. I allocated one compliment for Jason, and yes, I remembered to free it."
+            data-avatar-line="Front-end compiler in C: turning source code into structure before the backend gets all the glory."
+            data-hover-line="Compiler hover detected. Jason can parse messy input into meaning, which is basically teamwork with semicolons."
           >
             <div class="card-topline">
               <span class="language-pill c">C</span>
-              <span>Systems</span>
+              <span>Compiler</span>
             </div>
-            <h3>Mini Shell & Process Tools</h3>
+            <h3>Front-End Compiler</h3>
             <p>
-              A systems programming project focused on process control, file descriptors, parsing commands,
-              and understanding how operating systems coordinate work.
+              A C project focused on lexical analysis, parsing, syntax validation, and building the early
+              compiler stages that translate raw code into useful structure.
             </p>
             <ul>
-              <li>Process management</li>
-              <li>Pointer-safe data handling</li>
-              <li>Unix-style command flow</li>
+              <li>Lexical analysis</li>
+              <li>Parser design</li>
+              <li>Syntax trees</li>
+            </ul>
+          </article>
+
+          <article
+            class="project-card"
+            tabindex="0"
+            data-language="C"
+            data-avatar-line="Assembler project in C: labels, opcodes, and making machine instructions feel slightly less mysterious."
+            data-hover-line="Assembler hover! Jason speaks fluent almost-machine-code, but still uses comments like a civilized human."
+          >
+            <div class="card-topline">
+              <span class="language-pill c">C</span>
+              <span>Assembler</span>
+            </div>
+            <h3>Assembler Project</h3>
+            <p>
+              A low-level C project that reads assembly-style input, resolves symbols, validates instructions,
+              and emits machine-friendly output.
+            </p>
+            <ul>
+              <li>Symbol tables</li>
+              <li>Opcode encoding</li>
+              <li>Two-pass assembly</li>
             </ul>
           </article>
 
@@ -251,7 +274,7 @@
 
     <aside class="avatar-companion" aria-live="polite" aria-label="Portfolio avatar companion">
       <div class="speech-bubble" id="avatar-line">
-        Welcome! Hover over a project and I will deliver code jokes with suspicious confidence.
+        Hire Jason: he debugs calmly, learns fast, and even I trust him with production buttons.
       </div>
       <div class="avatar" aria-hidden="true">
         <span class="avatar-antenna"></span>

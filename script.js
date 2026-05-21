@@ -3,7 +3,7 @@ const avatarLine = document.querySelector("#avatar-line");
 const avatarCompanion = document.querySelector(".avatar-companion");
 const projectCards = Array.from(document.querySelectorAll(".project-card"));
 
-const defaultLine = "Welcome! Hover over a project and I will deliver code jokes with suspicious confidence.";
+const idleLine = "Hire Jason: he debugs calmly, learns fast, and even I trust him with production buttons.";
 let activeCard = null;
 let hoveredCard = null;
 let talkTimeout;
@@ -24,8 +24,6 @@ function setActiveCard(card) {
   projectCards.forEach((projectCard) => {
     projectCard.classList.toggle("is-active", projectCard === card);
   });
-
-  updateAvatarLine(card?.dataset.avatarLine || defaultLine);
 }
 
 function updateAvatarLine(line) {
@@ -47,7 +45,7 @@ function setHoveredCard(card) {
     projectCard.classList.toggle("is-hovered", isCurrentCard);
   });
 
-  updateAvatarLine(card.dataset.hoverLine || card.dataset.avatarLine || defaultLine);
+  updateAvatarLine(card.dataset.hoverLine || card.dataset.avatarLine || idleLine);
 }
 
 function clearHoveredCard(card) {
@@ -62,7 +60,7 @@ function clearHoveredCard(card) {
     projectCard.classList.toggle("is-active", projectCard === activeCard);
   });
 
-  updateAvatarLine(activeCard?.dataset.avatarLine || defaultLine);
+  updateAvatarLine(idleLine);
 }
 
 const projectObserver = new IntersectionObserver(
