@@ -4,7 +4,7 @@ const avatarCompanion = document.querySelector(".avatar-companion");
 const projectCards = Array.from(document.querySelectorAll(".project-card"));
 
 const idleLine =
-  "My creator told me to be on my best behavior so you'd hire them. Am I doing a good job?";
+  "My creator told me to be on my best behavior so you'd hire him. Am I doing a good job?";
 let activeCard = null;
 let hoveredCard = null;
 let talkTimeout;
