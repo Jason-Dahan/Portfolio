@@ -17,13 +17,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Thin progress indicator gives users feedback as they scroll the single-page portfolio. -->
     <div class="scroll-progress" aria-hidden="true"></div>
 
+    <!-- Sticky top navigation keeps the main sections easy to reach. -->
     <header class="site-header">
       <a class="logo" href="#top" aria-label="Jason Dahan home">JD</a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#education">Education</a>
+        <a href="#achievements">Courses</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -35,6 +38,7 @@
     </header>
 
     <main id="top">
+      <!-- Hero: first impression and fast links to the strongest portfolio areas. -->
       <section class="hero section-shell">
         <div class="hero-copy">
           <p class="eyebrow">Software developer portfolio</p>
@@ -70,6 +74,7 @@
         </aside>
       </section>
 
+      <!-- About: short professional summary that connects software work with discipline and ownership. -->
       <section id="about" class="section-shell split-section">
         <div>
           <p class="eyebrow">About me</p>
@@ -89,6 +94,7 @@
         </div>
       </section>
 
+      <!-- Education: degree and coursework that support the technical project choices below. -->
       <section id="education" class="section-shell education-section">
         <div class="section-heading">
           <p class="eyebrow">Education</p>
@@ -118,6 +124,47 @@
         </div>
       </section>
 
+      <!-- Courses and achievements: reusable placeholders for Udemy, Coursera, Cisco, and similar certificates. -->
+      <section id="achievements" class="section-shell achievements-section">
+        <div class="section-heading">
+          <p class="eyebrow">Courses & achievements</p>
+          <h2>Continuous learning beyond the degree.</h2>
+          <p>
+            This section is ready for completed online courses, certificates, professional training, and
+            technical achievements from providers such as Udemy, Coursera, Cisco, and other companies.
+          </p>
+        </div>
+
+        <div class="achievement-grid">
+          <article class="achievement-card">
+            <p class="achievement-provider">Udemy</p>
+            <h3>Practical development courses</h3>
+            <p>
+              Add completed Udemy courses here, especially hands-on courses that connect to backend,
+              systems, data, or full-stack projects.
+            </p>
+          </article>
+
+          <article class="achievement-card">
+            <p class="achievement-provider">Coursera</p>
+            <h3>Academic and professional certificates</h3>
+            <p>
+              Add completed Coursera certificates here, including university-backed courses or professional
+              certificates that strengthen your technical profile.
+            </p>
+          </article>
+
+          <article class="achievement-card">
+            <p class="achievement-provider">Cisco / industry</p>
+            <h3>Company training and certifications</h3>
+            <p>
+              Add Cisco, networking, cloud, security, or company-provided courses here as you complete them.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience: non-code background that reinforces teamwork, resilience, and responsibility. -->
       <section id="experience" class="section-shell experience-section">
         <div class="section-heading">
           <p class="eyebrow">Experience</p>
@@ -148,6 +195,7 @@
         </div>
       </section>
 
+      <!-- Projects: hover/focus data attributes feed the robot's speech bubble in script.js. -->
       <section id="projects" class="section-shell">
         <div class="section-heading">
           <p class="eyebrow">Featured projects</p>
@@ -286,6 +334,7 @@
         </div>
       </section>
 
+      <!-- Skills: quick scan of languages, tools, and technical areas. -->
       <section id="skills" class="section-shell skills-section">
         <div class="section-heading">
           <p class="eyebrow">Skills and focus</p>
@@ -305,6 +354,7 @@
         </div>
       </section>
 
+      <!-- Contact: final conversion point for LinkedIn and GitHub. -->
       <section id="contact" class="section-shell contact-section">
         <div>
           <p class="eyebrow">Let's connect</p>
@@ -325,6 +375,7 @@
       </section>
     </main>
 
+    <!-- Robot companion: fixed visual guide whose text changes when project cards are hovered or focused. -->
     <aside class="avatar-companion" aria-live="polite" aria-label="Portfolio avatar companion">
       <div class="speech-bubble" id="avatar-line">
         My creator told me to be on my best behavior so you'd hire him. Am I doing a good job?

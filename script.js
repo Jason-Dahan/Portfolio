@@ -3,6 +3,7 @@ const avatarLine = document.querySelector("#avatar-line");
 const avatarCompanion = document.querySelector(".avatar-companion");
 const projectCards = Array.from(document.querySelectorAll(".project-card"));
 
+// This line is shown whenever the visitor is not hovering or focusing a project card.
 const idleLine =
   "My creator told me to be on my best behavior so you'd hire him. Am I doing a good job?";
 let activeCard = null;
@@ -10,12 +11,14 @@ let hoveredCard = null;
 let talkTimeout;
 
 function updateScrollProgress() {
+  // Convert the current scroll position into a percentage for the top progress bar.
   const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
   const progress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
   progressBar.style.width = `${Math.min(progress, 100)}%`;
 }
 
 function setActiveCard(card) {
+  // Scrolling highlights the card in view, but hover/focus keeps priority for the robot text.
   activeCard = card;
 
   if (hoveredCard) {
@@ -28,6 +31,7 @@ function setActiveCard(card) {
 }
 
 function updateAvatarLine(line) {
+  // Briefly toggles a talking state so CSS can animate the speech bubble and robot arm.
   avatarLine.textContent = line;
   avatarCompanion.classList.add("is-talking");
 
@@ -38,6 +42,7 @@ function updateAvatarLine(line) {
 }
 
 function setHoveredCard(card) {
+  // Hover and keyboard focus use the same path so the interaction remains accessible.
   hoveredCard = card;
 
   projectCards.forEach((projectCard) => {
@@ -50,6 +55,7 @@ function setHoveredCard(card) {
 }
 
 function clearHoveredCard(card) {
+  // Ignore stale blur/mouseleave events if another card already became active.
   if (hoveredCard !== card) {
     return;
   }
@@ -64,6 +70,7 @@ function clearHoveredCard(card) {
   updateAvatarLine(idleLine);
 }
 
+// IntersectionObserver keeps the visible project card highlighted while scrolling.
 const projectObserver = new IntersectionObserver(
   (entries) => {
     const visibleEntries = entries
@@ -81,6 +88,7 @@ const projectObserver = new IntersectionObserver(
 );
 
 projectCards.forEach((card) => {
+  // Project cards provide their own robot text through data-hover-line attributes.
   projectObserver.observe(card);
   card.addEventListener("mouseenter", () => setHoveredCard(card));
   card.addEventListener("focus", () => setHoveredCard(card));
