@@ -4,7 +4,7 @@ const avatarCompanion = document.querySelector(".avatar-companion");
 const projectCards = Array.from(document.querySelectorAll(".project-card"));
 
 const idleLine =
-  "Worth hiring: Jason brings systems fundamentals, calm execution, and the habit of finishing what he starts.";
+  "My creator told me to be on my best behavior so you'd hire them. Am I doing a good job?";
 let activeCard = null;
 let hoveredCard = null;
 let talkTimeout;
