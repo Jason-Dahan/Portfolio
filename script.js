@@ -3,7 +3,8 @@ const avatarLine = document.querySelector("#avatar-line");
 const avatarCompanion = document.querySelector(".avatar-companion");
 const projectCards = Array.from(document.querySelectorAll(".project-card"));
 
-const idleLine = "Hire Jason: he debugs calmly, learns fast, and even I trust him with production buttons.";
+const idleLine =
+  "Worth hiring: Jason brings systems fundamentals, calm execution, and the habit of finishing what he starts.";
 let activeCard = null;
 let hoveredCard = null;
 let talkTimeout;
