@@ -7,7 +7,7 @@ A personal portfolio website for Jason Dahan, built as a lightweight static site
 - Responsive landing page with About, Education, Courses, Experience, Projects, Skills, and Contact sections
 - LinkedIn and GitHub calls to action
 - Featured project cards for C compiler, C assembler, C++, Java, and Python work
-- Reusable placeholders for Udemy, Coursera, Cisco, and other professional courses
+- Reusable placeholders for Udemy and Coursera courses, plus Cisco Networking Academy's Networking Basics course
 - Cute robot avatar with an idle hiring pitch and project-specific hover jokes
 - No build step or framework dependency required
 
