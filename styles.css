@@ -488,6 +488,10 @@ h3 {
   background: #ffd6a5;
 }
 
+.language-pill.javascript {
+  background: #ffe66d;
+}
+
 .language-pill.csharp {
   background: #d7b7ff;
 }
