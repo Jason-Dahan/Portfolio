@@ -488,8 +488,16 @@ h3 {
   background: #ffd6a5;
 }
 
+.language-pill.csharp {
+  background: #d7b7ff;
+}
+
 .language-pill.python {
   background: #fdffb6;
+}
+
+.language-pill.react {
+  background: #9bf6ff;
 }
 
 .language-pill.web {
